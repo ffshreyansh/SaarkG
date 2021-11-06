@@ -9,11 +9,21 @@
 </head>
 <body>
     <div class="body">
-        <div id="scoreBox">Score: 0</div>
-        <div id="hiscoreBox">High Score: 0</div>
+        <div id="scoreBox" style="font-size: large;">Assignments Submitted: 0</div>
+        <div id="hiscoreBox" style="font-size:large;">Highest Submission: 0</div>
         <div class="Back"><a  href="./index.html">Go Back</a> </div>
+        <div class="Rules" onclick="myFunction()" style="color: chocolate;">RULES
+            <span class="Rulestext" id="myRules" style="font-size: small;">The snake represents a student whose objective is to eat the food that is the assignment and it has to consume the food before the screen fades, screen fading represents the time stamp in which he has to complete the assignment</span>
+        </div>
         <div id="board"></div>
     </div>
 </body>
 <script src="js/index.js"></script>
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+      var Rules = document.getElementById("myRules");
+      Rules.classList.toggle("show");
+    }
+    </script>
 </html>

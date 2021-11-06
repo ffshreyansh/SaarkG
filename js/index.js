@@ -73,7 +73,7 @@ function mainGameFunction(){
         gameOverSound.play();
         musicSound.pause();
         inputDir =  {x: 0, y: 0}; 
-        alert("Game Over. Press any key to play again!");
+        alert("Oops Turned In Late! Press any key to play again!");
         snakeBodyArray = [{x: 13, y: 15}];
         musicSound.play();
         score = 0; 
@@ -85,10 +85,10 @@ function mainGameFunction(){
         score += 1;
         if(score>hiscoreval){
             hiscoreval = score;
-            localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
-            hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+            localStorage.setItem("Highest Submission", JSON.stringify(hiscoreval));
+            hiscoreBox.innerHTML = "Highest Submission: " + hiscoreval;
         }
-        scoreBox.innerHTML = "Score: " + score;
+        scoreBox.innerHTML = "Assignments Submitted: " + score;
         snakeBodyArray.unshift({x: snakeBodyArray[0].x + inputDir.x, y: snakeBodyArray[0].y + inputDir.y});
         let a = 2;
         let b = 16;
@@ -137,7 +137,7 @@ if(hiscore === null){
 }
 else{
     hiscoreval = JSON.parse(hiscore);
-    hiscoreBox.innerHTML = "HiScore: " + hiscore;
+    hiscoreBox.innerHTML = "Highest Submission: " + hiscore;
 }
 
 window.requestAnimationFrame(main);

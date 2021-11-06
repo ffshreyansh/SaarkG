@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Exhibition</title>
     <link rel="stylesheet" href="Style index.css">
+    <script>index.js</script>
 </head>
 <body>
     <img class="logo" width="20%" src="./img/A-01.png" alt="logo">
-    <img class="brain" src="https://media.giphy.com/media/Tk1JAnrarV7VcQmA4r/giphy.gif" alt="BG">
+    <img class="brain" width="40%" src="https://media.giphy.com/media/Tk1JAnrarV7VcQmA4r/giphy.gif" alt="BG">
    <div> <a class="btn" href="./Snake.html">Assignment</a></div>
-   <footer id="footer">
-<div class="footer-text"><p>
-        Saark
-    </p></div>
+   <footer>
+       <div class="popup" onclick="myFunction()">Created by team Saark
+        <span class="popuptext" id="myPopup" style="font-size: smaller;">Kaivalya Mani- 20BCE10585 <br>
+            Anshul Agrawal - 20BCE10438 <br>
+            Shreyansh Kumar- 20BCE10804 <br>    
+            Rohit Roy- 20BCE10180 <br>
+            Ajay kishore- 20BCE10144</span>
+    </div>
    </footer>
+   <script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
 </body>
 </html>

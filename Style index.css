@@ -1,9 +1,13 @@
 body{
     background-color: #f9faf7;
     display: flex;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
 }
 .brain{
-    margin-top: 200px;
+    margin-top: 100px;
 }
 .logo{
         position: absolute;
@@ -16,11 +20,11 @@ body{
     font-family: Arial;
     color: #ffffff;
     font-size: 20px;
-    background: #e7602e;
+    background: #dd4e31;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-    margin-top: 400px;
-    margin-left: 200px;
+    margin-top: -370px;
+    margin-left: 670px;
     position: absolute;
         
   }
@@ -29,10 +33,66 @@ body{
     background: #050505;
     text-decoration: none;
   }
-  #footer {
-    font-size: 14px;
-    background: #dc2f02;  
-    position: absolute;  
-    margin-top: 700px ;
+  footer{
+    background-color: #dd4e31;
+    font-size: 1.7rem;
+    color: white;
+    margin-top: auto;
+    padding-top: 50px;
+    text-align: center;
+    
   }
- 
+  /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 50px;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #ffffff;
+  color: chocolate;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  box-shadow: black;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
